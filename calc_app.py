@@ -48,9 +48,9 @@ while True:
         option = int(input("\nChoose 1 to make a calculation, 2 to display previous calculations or 3 to exit: "))
         
         if option == 1:
-            mathematical_calculations()
+            mathematical_things()
         elif option == 2:
-            previously_made_calculations()
+            p_made_calculations()
         elif option == 3:
             print("\nThank you.")
             break
