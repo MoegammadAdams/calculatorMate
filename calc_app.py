@@ -1,5 +1,5 @@
 
-def mathematical_things():
+def mathematical_calculations():
     try:
         num1 = float(input("\nPlease insert first number:"))
         operator = input("Please input one of the following operators(+,-,*,/):")
@@ -29,7 +29,7 @@ def mathematical_things():
     except ZeroDivisionError:
         print("\nNumbers cannot be divided by zero...Please try again.")
 
-def p_made_calculations():
+def previously_made_calculations():
     try:
         with open("equations.txt", "r") as file: 
             previous_calculations = file.readlines()
@@ -48,9 +48,9 @@ while True:
         option = int(input("\nChoose 1 to make a calculation, 2 to display previous calculations or 3 to exit: "))
         
         if option == 1:
-            mathematical_things()
+            mathematical_calculations()
         elif option == 2:
-            p_made_calculations()
+            previously_made_calculations()
         elif option == 3:
             print("\nThank you.")
             break
