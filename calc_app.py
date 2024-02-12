@@ -1,6 +1,11 @@
+    <<<<<<< rename-functions-for-consistency
+
+def mathematical_calculations():
+
 # This the sections that we are going to make the calculations
 # we are using mathematical_things to make thus calculations.
 def mathematical_things():
+
     try:
         num1 = float(input("\nPlease insert first number:")) # we are asking for a float input for the first number.
         operator = input("Please input one of the following operators(+,-,*,/):") # The user can choose from four operators.
@@ -33,10 +38,14 @@ def mathematical_things():
     except ZeroDivisionError:
         print("\nNumbers cannot be divided by zero...Please try again.")
 
+ <<<<<<< rename-functions-for-consistency
+def previously_made_calculations():
+=======
 # this function will call all previous made calculations in the file equation.txt.
 # file.readlines() will read through all the previously made calculations with the corresponding lines.
 # we are using a for loop to reiterate through the calculations made.
 def p_made_calculations():
+ >>>>>>> main
     try:
         with open("equations.txt", "r") as file: 
             previous_calculations = file.readlines()
@@ -59,9 +68,9 @@ while True:
         option = int(input("\nChoose 1 to make a calculation, 2 to display previous calculations or 3 to exit: "))
         
         if option == 1:
-            mathematical_things()
+            mathematical_calculations()
         elif option == 2:
-            p_made_calculations()
+            previously_made_calculations()
         elif option == 3:
             print("\nThank you.")
             break
@@ -70,3 +79,4 @@ while True:
     
     except ValueError:
         print("\nPlease insert either 1, 2 or 3 as an option.")
+        >>>>>>> main
